@@ -7,3 +7,16 @@ and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+
+- Ingest new entities
+  - `probely_account`
+  - `probely_finding`
+  - `probely_target`
+  - `probely_user`
+- Build new relationships
+  - `probely_account_has_target`
+  - `probely_account_has_user`
+  - `probely_target_has_finding`
+  - `probely_user_assigned_finding`

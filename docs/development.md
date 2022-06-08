@@ -1,28 +1,24 @@
 # Development
 
-Add details here to give a brief overview of how to work with the provider APIs.
-Please reference any SDKs or API docs used to help build the integration here.
-
-## Prerequisites
-
-Supply details about software or tooling (like maybe Docker or Terraform) that
-is needed for development here.
-
-Please supply references to documentation that details how to install those
-dependencies here.
-
-Tools like Node.js and NPM are already covered in the [README](../README.md) so
-don't bother documenting that here.
+This integration focuses on [Probelyl](https://probely.com/) and is using
+[Probely API](https://developers.probely.com/) for interacting with the Asana
+resources.
 
 ## Provider account setup
 
-Please provide information about the steps needed to create an account with a
-provider. Images and references to a provider's documentation is very helpful
-for new developers picking up your work.
+### In Probely
+
+1. Get Access Token
+   - From the login server, you can obtain the access token.
+     1. Setup the `.env` file with the appropriate credentials as well as
+        account type.
+     2. Start the login server.
+     3. Once you access on the browser, there should be a link to
+        `Get Probely Access Token`. Click on it.
 
 ## Authentication
 
-Supply details here for information on how to authenticate with a provider so
-that developers have an idea of what's needed to hit APIs. It may be useful to
-provide explanations for each value specified in the
-[`IntegrationInstanceConfigFieldMap`](../src/config.ts).
+Provide the `ACCESS_TOKEN` to the `.env`. You can use
+[`.env.example`](../.env.example) as a reference.
+
+The Access token will be used to authorize requests.
