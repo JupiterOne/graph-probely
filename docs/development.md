@@ -1,6 +1,6 @@
 # Development
 
-This integration focuses on [Probelyl](https://probely.com/) and is using
+This integration focuses on [Probely](https://probely.com/) and is using
 [Probely API](https://developers.probely.com/) for interacting with the Asana
 resources.
 
@@ -8,13 +8,10 @@ resources.
 
 ### In Probely
 
-1. Get Access Token
-   - From the login server, you can obtain the access token.
-     1. Setup the `.env` file with the appropriate credentials as well as
-        account type.
-     2. Start the login server.
-     3. Once you access on the browser, there should be a link to
-        `Get Probely Access Token`. Click on it.
+1. Select Target in the dashboard (Overview > Select target).
+2. Navigate to the "Settings" page and then the "Integrations" tab.
+3. Under API Keys, generate a new key and store it in .env as `ACCESS_TOKEN`
+   value.
 
 ## Authentication
 
