@@ -1,15 +1,18 @@
 ---
-sourceId: managed:template
+sourceId: managed:probely
 integrationDefinitionId: '${integration_definition_id}'
-questions: []
-  # - id: integration-question-template-replace-me
-  #   title: What kinds of questions will this integration support?
-  #   description:
-  #     TODO Every integration should contribute questions! Please be carefule
-  #     to replace this before deploying the integration to JupiterOne.
-  #   queries:
-  #     - name: good
-  #       query: |
-  #         find * with _integrationDefinitionId = '${integration_definition_id}'
-  #   tags:
-  #     - template
+questions: 
+- id: managed-question-probely-cvs-open-findings
+  title: What are Probely's cvs Open Findings?
+  description: 
+    Returns a list of Probely cvs security findings.
+  queries:
+    - name: Probely cvs findings
+      resultsAre: BAD
+      query: |
+        FIND UNIQUE probely_finding AS f
+        RETURN
+          f.name, f.cvssScore,f.lastFoundOn,f.numericSeverity
+  tags:
+    - probely
+    - vulnerabilities 
