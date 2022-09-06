@@ -3,7 +3,7 @@ sourceId: managed:probely
 integrationDefinitionId: '${integration_definition_id}'
 questions: 
 - id: managed-question-probely-cvs-open-findings
-  title: What are Probely's cvs Open Findings?
+  title: What are Probely's cvs open findings?
   description: 
     Returns a list of Probely cvs security findings.
   queries:
@@ -12,7 +12,7 @@ questions:
       query: |
         FIND UNIQUE probely_finding AS f
         RETURN
-          f.name, f.cvssScore,f.lastFoundOn,f.numericSeverity
+          f.name,f.cvssScore,f.lastFoundOn,f.numericSeverity
   tags:
     - probely
     - vulnerabilities 
