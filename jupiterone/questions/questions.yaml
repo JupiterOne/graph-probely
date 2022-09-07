@@ -2,12 +2,12 @@
 sourceId: managed:probely
 integrationDefinitionId: '${integration_definition_id}'
 questions: 
-- id: managed-question-probely-cvs-open-findings
-  title: What are Probely's cvs open findings?
+- id: managed-question-probely-common-vulnerability-scoring-findings
+  title: What are Probely's CVS open findings?
   description: 
-    Returns a list of Probely cvs security findings.
+    Returns a list of Probely CVS open findings.
   queries:
-    - name: Probely cvs findings
+    - name: Probely CVS findings
       resultsAre: BAD
       query: |
         FIND UNIQUE probely_finding AS f
