@@ -2,17 +2,17 @@
 sourceId: managed:probely
 integrationDefinitionId: '${integration_definition_id}'
 questions: 
-- id: managed-question-probely-common-vulnerability-scoring-findings
-  title: What are Probely's CVS open findings?
+- id: managed-question-probely-common-vulnerability-scoring-findings-that-are-not-fixed
+  title: What are Probely's CVSS findings that have not been fixed?
   description: 
-    Returns a list of Probely CVS open findings.
+    Returns a list of Probely CVSS findings that are not fixed.
   queries:
-    - name: Probely CVS findings
+    - name: Probely CVSS findings require remediation
       resultsAre: BAD
       query: |
-        FIND UNIQUE probely_finding AS f
+        FIND UNIQUE probely_finding WITH state = 'notfixed' AS f
         RETURN
-          f.name,f.cvssScore,f.lastFoundOn,f.numericSeverity
+          f.name,f.cvssScore,f.lastFoundOn,f.numericSeverity,f.severity,f.targetId
   tags:
     - probely
     - vulnerabilities 
