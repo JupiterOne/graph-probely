@@ -7,7 +7,7 @@ questions:
   description: 
     Returns a list of Probely CVSS findings that are not fixed.
   queries:
-    - name: Probely CVSS findings require remediation
+    - name: Probely CVSS Findings That Require Remediation 
       resultsAre: BAD
       query: |
         FIND UNIQUE probely_finding WITH state = 'notfixed' AS f
