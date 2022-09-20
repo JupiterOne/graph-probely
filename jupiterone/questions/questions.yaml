@@ -10,7 +10,7 @@ questions:
     - name: Probely CVSS Findings That Require Remediation 
       resultsAre: BAD
       query: |
-        FIND probely_finding WITH state = 'notfixed' AS f
+        FIND probely_finding WITH state ~= 'notfixed' AS f
         RETURN
           f.name,f.cvssScore,f.lastFoundOn,f.numericSeverity,f.severity,f.targetId
   tags:
