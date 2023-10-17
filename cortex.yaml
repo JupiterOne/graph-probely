@@ -1,0 +1,12 @@
+openapi: 3.0.1
+info:
+  title: '@jupiterone/graph-probely'
+  description: A JupiterOne Integration for ingesting data of Probely
+  x-cortex-git:
+    github:
+      repository: JupiterOne/graph-probely
+  x-cortex-owners:
+    - type: group
+      name: JupiterOne/integrations
+  x-cortex-service-groups: tier-4
+  x-cortex-tag: '@jupiterone/graph-probely'
